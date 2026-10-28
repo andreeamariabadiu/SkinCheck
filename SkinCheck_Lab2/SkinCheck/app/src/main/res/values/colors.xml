@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Jo Malone Luxury Palette -->
-    <color name="jo_background">#FBF9F5</color>      <!-- Crem Pergament / Ivory -->
-    <color name="jo_surface">#FFFFFF</color>         <!-- Alb Pur / Carduri -->
-    <color name="jo_surface_alt">#F5F2EB</color>     <!-- Crem Secundar pentru hover/fundaluri alternative -->
-    <color name="jo_primary">#141414</color>         <!-- Negru Obsidian (Text principal) -->
-    <color name="jo_secondary">#6E6E6E</color>       <!-- Gri Cald (Text secundar) -->
-    <color name="jo_accent">#C5A059</color>          <!-- Auriu Șampanie / Bronz subtil -->
-    <color name="jo_border">#E2DDD2</color>          <!-- Bej fin pentru chenare subțiri -->
-    <color name="jo_button_text">#FFFFFF</color>     <!-- Text alb pe butoane -->
+    <!-- Warm Editorial Skincare Palette -->
+    <color name="jo_background">#FAF7F2</color>          <!-- Canvas / Background (Warm ivory) -->
+    <color name="jo_surface">#FFFDF9</color>             <!-- Surface / Card Layer (Pure cream) -->
+    <color name="jo_surface_alt">#E9DED1</color>         <!-- Tertiary Accent / Neutral badges -->
+    <color name="jo_primary">#493B36</color>             <!-- Primary text: Cocoa brown -->
+    <color name="jo_secondary">#8A7A72</color>       <!-- Secondary text: Muted taupe -->
+    <color name="jo_accent">#C88F91</color>              <!-- Primary Accent: Dusty rose -->
+    <color name="jo_border">#EFE8DE</color>              <!-- Tertiary / Border tone: Linen glaze -->
+    <color name="jo_button_text">#FFFFFF</color>
 
-    <!-- Status / Rating Luxury Pastels -->
-    <color name="skin_green">#2E5A44</color>         <!-- Verde Eucalipt (Sigur) -->
-    <color name="skin_green_bg">#E8F0EC</color>      <!-- Fundal verde pastel -->
-    <color name="skin_yellow">#9C7C38</color>        <!-- Auriu/Măsliniu (Moderat) -->
-    <color name="skin_yellow_bg">#F7F3EA</color>     <!-- Fundal galben pastel -->
-    <color name="skin_red">#8C3B32</color>           <!-- Roșu Terracotta (Evită) -->
-    <color name="skin_red_bg">#F9EFEF</color>        <!-- Fundal roșu pastel -->
+    <!-- Skincare Tolerance Classification Tokens -->
+    <color name="skin_green">#2D5A27</color>         <!-- Forest green text (Sigur) -->
+    <color name="skin_green_bg">#DCE8D8</color>      <!-- Soft sage green wash -->
 
-    <!-- Culorile specifice cerute de layout-uri -->
-    <color name="placeholder_bg">#EFECE6</color>     <!-- Pentru bg_placeholder.xml -->
-    <color name="scan_background">#121212</color>    <!-- Pentru fragment_scan.xml -->
-    <color name="skin_gold">#C5A059</color>          <!-- Pentru item_product.xml -->
+    <color name="skin_yellow">#7A5C10</color>        <!-- Dark amber ochre text (Atenție) -->
+    <color name="skin_yellow_bg">#F5E8B8</color>     <!-- Soft butter yellow wash -->
 
-    <!-- Suport UI -->
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
-    <color name="gray">#9E9E9E</color>
+    <color name="skin_red">#8C342C</color>           <!-- Deep terracotta red text (De Evitat) -->
+    <color name="skin_red_bg">#E9C1BB</color>        <!-- Muted coral rose wash -->
+
+    <!-- Suport UI suplimentar -->
+    <color name="white">#FFFDF9</color>
+    <color name="black">#241915</color>
+    <color name="gray">#8A7A72</color>
+    <color name="scan_background">#1B1412</color>    <!-- Fundal întunecat elegant pentru ecranul de scanare -->
+    <!-- Culori adiționale pentru placeholder și elemente aurii -->
+    <color name="placeholder_bg">#EFE8DE</color>      <!-- Linen glaze / ton cald pentru fundal imagini -->
+    <color name="skin_gold">#C5A059</color>           <!-- Auriu șampanie / accent pentru favorite -->
 </resources>

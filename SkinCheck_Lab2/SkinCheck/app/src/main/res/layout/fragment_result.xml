@@ -10,16 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="32dp">
+        android:paddingBottom="40dp">
 
-        <!-- Bară de Sus (Buton Înapoi & Buton Favorite) -->
+        <!-- Bară de Sus (Navigare, Titlu, Acțiuni) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginBottom="24dp">
+            android:paddingHorizontal="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="12dp">
 
             <Button
                 android:id="@+id/btnBack"
@@ -49,58 +50,157 @@
                 android:background="@drawable/bg_luxury_card"
                 android:src="@android:drawable/btn_star_big_on"
                 android:contentDescription="Favorite"
-                app:tint="@color/gray"
+                app:tint="@color/jo_accent"
                 android:padding="10dp" />
 
         </LinearLayout>
 
-        <!-- Brand și Nume Produs -->
-        <TextView
-            android:id="@+id/tvBrand"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Brand"
-            android:textSize="12sp"
-            android:letterSpacing="0.15"
-            android:textColor="@color/jo_accent"
-            android:layout_marginBottom="4dp" />
-
-        <TextView
-            android:id="@+id/tvName"
+        <!-- Sub-bară de Status INCI -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nume Produs"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@color/jo_primary"
-            android:layout_marginBottom="8dp" />
+            android:orientation="horizontal"
+            android:paddingHorizontal="24dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/tvBarcode"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_pill"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✓ Formulă Verificată INCI"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/jo_primary" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Card Antet Produs (Editorial Header) -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Barcode: 00000000"
-            android:textSize="12sp"
-            android:textColor="@color/jo_secondary"
-            android:layout_marginBottom="24dp" />
+            android:orientation="horizontal"
+            android:background="@drawable/bg_luxury_card"
+            android:padding="16dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical">
 
-        <!-- Card de Evaluare / Rating -->
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="88dp"
+                android:src="@drawable/bg_placeholder"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_luxury_card"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Product Image" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvBrand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="THE ORDINARY"
+                    android:textSize="11sp"
+                    android:letterSpacing="0.2"
+                    android:textStyle="bold"
+                    android:textColor="@color/jo_accent"
+                    android:layout_marginBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Niacinamide 10% + Zinc 1%"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/jo_primary"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvBarcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barcode: 00000000"
+                    android:textSize="12sp"
+                    android:textColor="@color/jo_secondary" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Card Evaluare / Signature Assessment Card -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardRating"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginBottom="20dp"
             app:cardBackgroundColor="@color/jo_surface"
-            app:cardCornerRadius="8dp"
+            app:cardCornerRadius="20dp"
             app:cardElevation="0dp"
             app:strokeColor="@color/jo_border"
-            app:strokeWidth="1dp"
-            android:layout_marginBottom="24dp">
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="20dp">
+
+                <!-- Warning Badge Banner -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_luxury_card"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:text="⚠️"
+                        android:gravity="center"
+                        android:layout_marginEnd="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ATENȚIE LA ANUMITE INGREDIENTE"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/skin_yellow"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Produsul este benefic pentru sebum și pori, însă concentrația ridicată poate cauza roșeață temporară."
+                            android:textSize="12sp"
+                            android:textColor="@color/jo_secondary"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -109,7 +209,7 @@
                     android:textSize="10sp"
                     android:letterSpacing="0.2"
                     android:textColor="@color/jo_secondary"
-                    android:layout_marginBottom="8dp" />
+                    android:layout_marginBottom="6dp" />
 
                 <TextView
                     android:id="@+id/tvRatingBig"
@@ -123,22 +223,29 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Titlu Secțiune Ingrediente -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Analiza Ingredientelor"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/jo_primary"
-            android:layout_marginBottom="12dp" />
-
-        <!-- RecyclerView pentru Ingrediente -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvIngredients"
+        <!-- Secțiune Listă Ingrediente (INCI Breakdown) -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:nestedScrollingEnabled="false" />
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analiza Ingredientelor (INCI)"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/jo_primary"
+                android:layout_marginBottom="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

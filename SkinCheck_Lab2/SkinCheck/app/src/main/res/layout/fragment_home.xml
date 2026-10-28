@@ -10,128 +10,171 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="24dp"
-        android:paddingVertical="32dp">
+        android:paddingHorizontal="16dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="100dp">
 
-        <!-- Header / Brand Niche & Profil -->
+        <!-- Header / Salut Editorial -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="32dp">
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp">
 
+            <!-- Badge Ritual Conștient -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_luxury_card"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:layout_marginBottom="12dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="S K I N · C H E C K"
-                    android:textSize="14sp"
+                    android:text="🌿 Ritual Conștient"
+                    android:textSize="11sp"
                     android:textStyle="bold"
-                    android:letterSpacing="0.4"
-                    android:textColor="@color/jo_accent"
+                    android:textColor="@color/jo_primary"
+                    android:letterSpacing="0.05" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pielea ta merită să știe."
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/jo_primary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descoperă ce se află în produsele tale de îngrijire."
+                android:textSize="14sp"
+                android:textColor="@color/jo_secondary" />
+        </LinearLayout>
+
+        <!-- Hero Scanner Showcase Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/jo_surface"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/jo_border"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:padding="24dp">
+
+                <!-- Imagine / Element vizual minimalist -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/bg_placeholder"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_luxury_card"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="Serum Product" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verifică orice etichetă INCI"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/jo_primary"
                     android:layout_marginBottom="4dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pielea Ta, În Detaliu"
-                    android:textSize="24sp"
-                    android:textStyle="normal"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/jo_primary" />
+                    android:text="Analizează ingredientele în doar câteva secunde."
+                    android:textSize="12sp"
+                    android:textColor="@color/jo_secondary"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp" />
+
+                <Button
+                    android:id="@+id/btnScan"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="Scanează un produs"
+                    android:textSize="13sp"
+                    android:letterSpacing="0.1"
+                    android:textStyle="bold"
+                    android:textColor="@color/jo_button_text"
+                    android:background="@drawable/bg_luxury_button"
+                    app:backgroundTint="@null"
+                    android:elevation="0dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✨ Recunoaștere instantanee a 12.000+ compuși"
+                    android:textSize="11sp"
+                    android:textColor="@color/jo_secondary"
+                    android:layout_marginTop="12dp" />
+
             </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-            <!-- Buton Profil (Adăugat pentru a rezolva binding-ul) -->
-            <Button
-                android:id="@+id/btnProfile"
-                android:layout_width="44dp"
-                android:layout_height="44dp"
-                android:text="⚙"
-                android:textSize="16sp"
-                android:textColor="@color/jo_primary"
-                android:background="@drawable/bg_luxury_card"
-                app:backgroundTint="@null"
-                android:elevation="0dp" />
-        </LinearLayout>
-
-        <!-- Card Principal / Buton Scan -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_luxury_card"
-            android:padding="24dp"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DIAGNOSTIC ACTIV"
-                android:textSize="10sp"
-                android:letterSpacing="0.2"
-                android:textColor="@color/jo_secondary"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Analiză Inteligentă a Tenului"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/jo_primary"
-                android:layout_marginBottom="16dp" />
-
-            <Button
-                android:id="@+id/btnScan"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="Începe Analiza"
-                android:textSize="13sp"
-                android:letterSpacing="0.15"
-                android:textStyle="bold"
-                android:textColor="@color/jo_button_text"
-                android:background="@drawable/bg_luxury_button"
-                app:backgroundTint="@null"
-                android:elevation="0dp" />
-
-        </LinearLayout>
-
-        <!-- Butoane Secundare (Istoric & Favorite) -->
+        <!-- Quick Shortcut Cards Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="2"
+            android:weightSum="3"
             android:layout_marginBottom="24dp">
 
+            <!-- Istoric -->
             <Button
                 android:id="@+id/btnHistory"
                 android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:layout_height="72dp"
                 android:layout_weight="1"
-                android:text="Istoric"
-                android:textSize="12sp"
-                android:letterSpacing="0.1"
+                android:text="Istoric\n18 produse"
+                android:textSize="11sp"
                 android:textColor="@color/jo_primary"
                 android:background="@drawable/bg_luxury_card"
                 app:backgroundTint="@null"
                 android:layout_marginEnd="6dp"
                 android:elevation="0dp" />
 
+            <!-- Favorite -->
             <Button
                 android:id="@+id/btnFavorites"
                 android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:layout_height="72dp"
                 android:layout_weight="1"
-                android:text="Favorite"
-                android:textSize="12sp"
-                android:letterSpacing="0.1"
+                android:text="Favorite\n7 salvate"
+                android:textSize="11sp"
+                android:textColor="@color/jo_primary"
+                android:background="@drawable/bg_luxury_card"
+                app:backgroundTint="@null"
+                android:layout_marginEnd="6dp"
+                android:layout_marginStart="3dp"
+                android:elevation="0dp" />
+
+            <!-- Profil ten -->
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:text="Profil ten\nSensibil"
+                android:textSize="11sp"
                 android:textColor="@color/jo_primary"
                 android:background="@drawable/bg_luxury_card"
                 app:backgroundTint="@null"
@@ -140,22 +183,30 @@
 
         </LinearLayout>
 
-        <!-- Secțiune Produse Recente (RecyclerView) -->
+        <!-- Ultimele tale descoperiri (RecyclerView pentru produse recente) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@drawable/bg_luxury_card"
-            android:padding="20dp">
+            android:layout_marginBottom="24dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ultimele Scanări"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                android:textColor="@color/jo_primary"
-                android:layout_marginBottom="12dp" />
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ultimele tale descoperiri"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/jo_primary" />
+
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvRecent"
@@ -164,6 +215,53 @@
                 android:nestedScrollingEnabled="false" />
 
         </LinearLayout>
+
+        <!-- Ingredientul Zilei (Card Educațional) -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/jo_surface_alt"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/jo_border"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌿 INGREDIENTUL ZILEI"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/jo_accent"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Centella Asiatica (Cica)"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/jo_primary"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cunoscut și sub numele de Gotu Kola, acest extract botanic calmează roșeața și accelerează refacerea barierei cutanate."
+                    android:textSize="13sp"
+                    android:textColor="@color/jo_secondary"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>

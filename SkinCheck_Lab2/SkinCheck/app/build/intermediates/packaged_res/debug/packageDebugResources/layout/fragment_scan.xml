@@ -1,129 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/scan_background"
-    android:padding="24dp">
+    android:fillViewport="true"
+    android:background="@color/scan_background">
 
-    <!-- Buton Închidere -->
-    <ImageButton
-        android:id="@+id/btnClose"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/bg_luxury_card"
-        android:src="@android:drawable/ic_menu_close_clear_cancel"
-        android:contentDescription="Închide"
-        app:tint="@color/jo_primary"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!-- Titlu ecran -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="S C A N A R E"
-        android:textSize="12sp"
-        android:letterSpacing="0.3"
-        android:textColor="@color/jo_accent"
-        app:layout_constraintTop_toTopOf="@id/btnClose"
-        app:layout_constraintBottom_toBottomOf="@id/btnClose"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Buton Blitz / Flash -->
-    <ImageButton
-        android:id="@+id/btnFlash"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@drawable/bg_luxury_card"
-        android:src="@android:drawable/ic_menu_camera"
-        android:contentDescription="Flash"
-        app:tint="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Chenar / Viewfinder -->
-    <View
-        android:id="@+id/viewFinderBorder"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:background="@drawable/bg_luxury_card"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/btnClose"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Poziționați codul în cadru"
-        android:textSize="12sp"
-        android:textColor="@color/white"
-        android:alpha="0.7"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@id/viewFinderBorder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <!-- Zona de Input & Butoane -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/viewFinderBorder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:paddingBottom="40dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilBarcode"
+        <!-- Zona Superioară / Vizor Cameră (Viewfinder Container) -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Introduceți codul de bare"
-            app:boxBackgroundColor="@color/jo_surface"
-            app:boxBackgroundMode="outline"
-            app:boxStrokeColor="@color/jo_accent"
-            app:hintTextColor="@color/jo_accent"
-            android:layout_marginBottom="12dp">
+            android:orientation="vertical"
+            android:background="@drawable/bg_luxury_card"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="32dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etBarcode"
+            <!-- Bară de Sus (Închidere, Status, Flash) -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:imeOptions="actionSearch"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+
+                <ImageButton
+                    android:id="@+id/btnClose"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_luxury_card"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    android:contentDescription="Închide"
+                    app:tint="@color/jo_primary"
+                    android:padding="10dp"
+                    android:elevation="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="S E N Z O R · A C T I V"
+                        android:textSize="11sp"
+                        android:letterSpacing="0.3"
+                        android:textColor="@color/jo_accent" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnFlash"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_luxury_card"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:contentDescription="Flash"
+                    app:tint="@color/white"
+                    android:padding="10dp"
+                    android:elevation="0dp" />
+
+            </LinearLayout>
+
+            <!-- Cadru / Viewfinder Minimalist pentru Scanare -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_luxury_card"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apropie codul de bare în cadru"
+                    android:textSize="13sp"
+                    android:textColor="@color/jo_secondary"
+                    android:letterSpacing="0.1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Focalizare automată activă"
+                android:textSize="11sp"
+                android:textColor="@color/jo_secondary"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Panou de Control Inferior și Introducere Manuală -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="24dp">
+
+            <!-- Câmp Introducere Cod de Bare -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Introduceți codul de bare"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBarcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:imeOptions="actionSearch"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Buton Căutare Principal -->
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Caută Produs după Cod"
+                android:textSize="13sp"
+                android:letterSpacing="0.15"
+                android:textStyle="bold"
+                android:textColor="@color/jo_button_text"
+                android:background="@drawable/bg_luxury_button"
+                app:backgroundTint="@null"
+                android:elevation="0dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Buton Simulare Scanare -->
+            <Button
+                android:id="@+id/btnSimulate"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Simulează Scanare Aleatorie"
+                android:textSize="13sp"
+                android:letterSpacing="0.15"
                 android:textColor="@color/jo_primary"
-                android:textSize="14sp" />
+                android:background="@drawable/bg_luxury_card"
+                app:backgroundTint="@null"
+                android:elevation="0dp"
+                android:layout_marginBottom="24dp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <!-- Card Informativ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_luxury_card"
+                android:padding="16dp"
+                android:gravity="center_vertical">
 
-        <Button
-            android:id="@+id/btnSearch"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Caută Produs"
-            android:textSize="13sp"
-            android:letterSpacing="0.1"
-            android:textStyle="bold"
-            android:textColor="@color/jo_button_text"
-            android:background="@drawable/bg_luxury_button"
-            app:backgroundTint="@null"
-            android:elevation="0dp"
-            android:layout_marginBottom="10dp" />
+                <TextView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:text="💡"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_marginEnd="12dp" />
 
-        <Button
-            android:id="@+id/btnSimulate"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="Simulează Scanare Aleatorie"
-            android:textSize="13sp"
-            android:letterSpacing="0.1"
-            android:textColor="@color/jo_primary"
-            android:background="@drawable/bg_luxury_card"
-            app:backgroundTint="@null"
-            android:elevation="0dp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        text="Nu găsești codul de bare?"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/jo_primary"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Poți introduce cifrele manual în câmpul de mai sus pentru o căutare rapidă în baza de date offline."
+                        android:textSize="12sp"
+                        android:textColor="@color/jo_secondary"
+                        android:lineSpacingExtra="3dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

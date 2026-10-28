@@ -6,9 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.textfield.TextInputEditText;
@@ -20,7 +20,7 @@ import java.lang.String;
 
 public final class FragmentScanBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final ImageButton btnClose;
@@ -40,13 +40,9 @@ public final class FragmentScanBinding implements ViewBinding {
   @NonNull
   public final TextInputLayout tilBarcode;
 
-  @NonNull
-  public final View viewFinderBorder;
-
-  private FragmentScanBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton btnClose,
+  private FragmentScanBinding(@NonNull ScrollView rootView, @NonNull ImageButton btnClose,
       @NonNull ImageButton btnFlash, @NonNull Button btnSearch, @NonNull Button btnSimulate,
-      @NonNull TextInputEditText etBarcode, @NonNull TextInputLayout tilBarcode,
-      @NonNull View viewFinderBorder) {
+      @NonNull TextInputEditText etBarcode, @NonNull TextInputLayout tilBarcode) {
     this.rootView = rootView;
     this.btnClose = btnClose;
     this.btnFlash = btnFlash;
@@ -54,12 +50,11 @@ public final class FragmentScanBinding implements ViewBinding {
     this.btnSimulate = btnSimulate;
     this.etBarcode = etBarcode;
     this.tilBarcode = tilBarcode;
-    this.viewFinderBorder = viewFinderBorder;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -120,14 +115,8 @@ public final class FragmentScanBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.viewFinderBorder;
-      View viewFinderBorder = ViewBindings.findChildViewById(rootView, id);
-      if (viewFinderBorder == null) {
-        break missingId;
-      }
-
-      return new FragmentScanBinding((ConstraintLayout) rootView, btnClose, btnFlash, btnSearch,
-          btnSimulate, etBarcode, tilBarcode, viewFinderBorder);
+      return new FragmentScanBinding((ScrollView) rootView, btnClose, btnFlash, btnSearch,
+          btnSimulate, etBarcode, tilBarcode);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

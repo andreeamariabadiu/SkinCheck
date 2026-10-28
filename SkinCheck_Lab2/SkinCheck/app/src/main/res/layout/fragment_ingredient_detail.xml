@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/jo_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="40dp">
+
+        <!-- Bară de Sus (Navigare și Acțiuni) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="←"
+                android:textSize="18sp"
+                android:textColor="@color/jo_primary"
+                android:background="@drawable/bg_luxury_card"
+                app:backgroundTint="@null"
+                android:elevation="0dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="F I Ș Ă · I N G R E D I E N T"
+                android:textSize="11sp"
+                android:letterSpacing="0.3"
+                android:textColor="@color/jo_accent"
+                android:gravity="center" />
+
+            <ImageButton
+                android:id="@+id/btnBookmark"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_luxury_card"
+                android:src="@android:drawable/ic_menu_save"
+                android:contentDescription="Salvează ingredient"
+                app:tint="@color/jo_secondary"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <!-- Hero Card / Prezentare Principală Ingredient -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_luxury_card"
+            android:padding="24dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- Badge de Atenționare / Compatibilitate -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_pill"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚠️ Atenție la concentrație (Galben)"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/skin_yellow" />
+            </LinearLayout>
+
+            <!-- Nume și Subtitlu -->
+            <TextView
+                android:id="@+id/tvIngredientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Niacinamide"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/jo_primary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvIngredientSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vitamina B3 / Nicotinamidă"
+                android:textSize="14sp"
+                android:textColor="@color/jo_secondary"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Tag-uri / Beneficii -->
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:chipSpacingHorizontal="6dp"
+                app:chipSpacingVertical="6dp">
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reglare sebum" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Barieră cutanată" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Iluminare" />
+
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Assist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Antiinflamator" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </LinearLayout>
+
+        <!-- Secțiune: Ce este? -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_luxury_card"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ce este?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/jo_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="O formă solubilă în apă a vitaminei B3, esențială pentru metabolismul celular al pielii. Este unul dintre cele mai cercetate și versatile ingrediente din cosmetica modernă."
+                android:textSize="14sp"
+                android:textColor="@color/jo_secondary"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+        <!-- Secțiune: La ce folosește? -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_luxury_card"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="La ce folosește?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/jo_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Întărește bariera lipidică prin stimularea ceramidelor naturale, reduce pierderea transepidermică de apă (TEWL), uniformizează nuanța tenului și reduce dimensiunea vizibilă a porilor."
+                android:textSize="14sp"
+                android:textColor="@color/jo_secondary"
+                android:lineSpacingExtra="4dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Statistici / Metric Grid -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_luxury_card"
+                    android:padding="12dp"
+                    android:layout_marginEnd="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EFECT OPTIM"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/jo_secondary"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2% – 5% Concentrație"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/jo_primary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_luxury_card"
+                    android:padding="12dp"
+                    android:layout_marginStart="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BARIERĂ CUTANATĂ"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/jo_secondary"
+                        android:layout_marginBottom="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+34% Ceramide"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/skin_green" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Secțiune: De ce apare această evaluare? -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_luxury_card"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De ce apare această evaluare?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/jo_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deși niacinamida este sigură și compatibilă la concentrații obișnuite (2-5%), concentrațiile ridicate de 10% sau mai mult pot elibera acid nicotinic rezidual, provocând vasodilatație, roșeață temporară și furnicături pe tenul reactiv."
+                android:textSize="14sp"
+                android:textColor="@color/jo_secondary"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+
+        <!-- Butoane de Acțiune Finală -->
+        <Button
+            android:id="@+id/btnAlternatives"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Găsește produse alternative"
+            android:textSize="13sp"
+            android:letterSpacing="0.1"
+            android:textStyle="bold"
+            android:textColor="@color/jo_button_text"
+            android:background="@drawable/bg_luxury_button"
+            app:backgroundTint="@null"
+            android:elevation="0dp"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnBlacklist"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Adaugă la ingrediente de evitat"
+            android:textSize="13sp"
+            android:letterSpacing="0.1"
+            android:textColor="@color/jo_primary"
+            android:background="@drawable/bg_luxury_card"
+            app:backgroundTint="@null"
+            android:elevation="0dp" />
+
+    </LinearLayout>
+</ScrollView>

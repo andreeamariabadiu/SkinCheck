@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-debug-48:\\drawable_ic_home.xml.flat",
-        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\drawable\\ic_home.xml"
+        "merged": "com.skincheck.app-debug-48:/layout_fragment_scan.xml.flat",
+        "source": "com.skincheck.app-main-50:/layout/fragment_scan.xml"
     },
     {
-        "merged": "com.skincheck.app-debug-48:/layout_item_product.xml.flat",
-        "source": "com.skincheck.app-main-50:/layout/item_product.xml"
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-debug-48:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\drawable\\ic_home.xml"
     },
     {
         "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-debug-48:\\drawable_bg_pill.xml.flat",
@@ -46,6 +46,10 @@
     {
         "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-debug-48:\\layout_fragment_home.xml.flat",
         "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-debug-48:\\layout_fragment_ingredient_detail.xml.flat",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\fragment_ingredient_detail.xml"
     },
     {
         "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-debug-48:\\layout_item_product.xml.flat",

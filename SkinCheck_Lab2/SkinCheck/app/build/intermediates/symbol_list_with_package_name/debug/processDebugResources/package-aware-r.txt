@@ -3276,7 +3276,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAlternatives
 id btnBack
+id btnBlacklist
+id btnBookmark
 id btnClose
 id btnFav
 id btnFavorites
@@ -3709,6 +3712,8 @@ id tvBrand
 id tvEmpty
 id tvExplanation
 id tvFunction
+id tvIngredientName
+id tvIngredientSubtitle
 id tvName
 id tvRating
 id tvRatingBig
@@ -3720,7 +3725,6 @@ id up
 id useLogo
 id vertical_only
 id viewDot
-id viewFinderBorder
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3873,6 +3877,7 @@ layout design_text_input_start_icon
 layout dialog_ingredient
 layout fragment_history
 layout fragment_home
+layout fragment_ingredient_detail
 layout fragment_profile
 layout fragment_result
 layout fragment_scan
