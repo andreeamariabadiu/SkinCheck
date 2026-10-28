@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-mergeDebugResources-47:\\layout\\fragment_history.xml",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\fragment_history.xml"
+    },
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-mergeDebugResources-47:\\layout\\item_product.xml",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\item_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-mergeDebugResources-47:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.skincheck.app-mergeDebugResources-47:/layout/item_product.xml",
+        "source": "com.skincheck.app-main-50:/layout/item_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-mergeDebugResources-47:\\layout\\fragment_result.xml",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\fragment_result.xml"
+    },
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-mergeDebugResources-47:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-mergeDebugResources-47:\\layout\\item_ingredient.xml",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\item_ingredient.xml"
+    },
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-mergeDebugResources-47:\\layout\\dialog_ingredient.xml",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\dialog_ingredient.xml"
+    },
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-mergeDebugResources-47:\\layout\\fragment_scan.xml",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\fragment_scan.xml"
+    },
+    {
+        "merged": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-mergeDebugResources-47:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\Andreea\\.gradle\\daemon\\8.7\\com.skincheck.app-main-50:\\layout\\fragment_home.xml"
+    }
+]

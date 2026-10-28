@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SkinCheck</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Start</string>
+    <string name="nav_history">Verlauf</string>
+    <string name="nav_profile">Profil</string>
+
+    <!-- Bewertung -->
+    <string name="rating_green">Grün – unproblematisch</string>
+    <string name="rating_yellow">Gelb – Vorsicht</string>
+    <string name="rating_red">Rot – möglicherweise problematisch</string>
+
+    <!-- Home -->
+    <string name="home_title">Willkommen bei SkinCheck</string>
+    <string name="home_subtitle">Scanne den Barcode deines Hautpflegeprodukts und sieh, wie verträglich die Inhaltsstoffe sind.</string>
+    <string name="home_scan">Scannen</string>
+    <string name="home_history">Verlauf</string>
+    <string name="home_favorites">Favoriten</string>
+    <string name="home_profile">Profil</string>
+    <string name="home_recent">Zuletzt gescannt</string>
+    <string name="disclaimer">SkinCheck ersetzt keine medizinische Beratung.</string>
+
+    <!-- Scan -->
+    <string name="scan_hint">Barcode in den Rahmen legen</string>
+    <string name="scan_flash">Taschenlampe</string>
+    <string name="scan_close">Schließen</string>
+    <string name="scan_manual_label">Barcode manuell eingeben</string>
+    <string name="scan_search">Suchen</string>
+    <string name="scan_simulate">Scan simulieren (Demo)</string>
+    <string name="scan_error">Bitte einen gültigen Barcode eingeben (8–14 Ziffern)</string>
+    <string name="scan_not_found">Produkt nicht gefunden. Die manuelle Eingabe der Inhaltsstoffe folgt.</string>
+
+    <!-- Ergebnis -->
+    <string name="result_back">Zurück</string>
+    <string name="result_favorite">Zu Favoriten hinzufügen</string>
+    <string name="result_barcode">Barcode: %1$s</string>
+    <string name="result_ingredients">Inhaltsstoffe</string>
+    <string name="product_image">Produktbild</string>
+
+    <!-- Inhaltsstoff-Details -->
+    <string name="detail_function">Funktion</string>
+    <string name="detail_explanation">Erklärung</string>
+    <string name="detail_source">Quelle</string>
+    <string name="detail_close">Schließen</string>
+
+    <!-- Verlauf -->
+    <string name="history_title">Verlauf &amp; Favoriten</string>
+    <string name="filter_all">Alle</string>
+    <string name="filter_green">Grün</string>
+    <string name="filter_yellow">Gelb</string>
+    <string name="filter_red">Rot</string>
+    <string name="filter_fav">Favoriten</string>
+    <string name="history_empty">Keine Produkte gefunden.</string>
+
+    <!-- Profil -->
+    <string name="profile_title">Mein Hautprofil</string>
+    <string name="profile_skin_type">Hauttyp</string>
+    <string name="skin_normal">Normal</string>
+    <string name="skin_dry">Trocken</string>
+    <string name="skin_oily">Fettig</string>
+    <string name="skin_sensitive">Empfindlich</string>
+    <string name="skin_combination">Mischhaut</string>
+    <string name="profile_allergies">Allergien und Unverträglichkeiten</string>
+    <string name="allergy_fragrance">Duftstoffe</string>
+    <string name="allergy_alcohol">Alkohol</string>
+    <string name="allergy_preservatives">Konservierungsstoffe</string>
+    <string name="allergy_lanolin">Lanolin</string>
+    <string name="allergy_nuts">Nussöle</string>
+    <string name="profile_wishes">Persönliche Wünsche</string>
+    <string name="wish_no_perfume">Ohne Parfüm</string>
+    <string name="wish_no_alcohol">Ohne Alkohol</string>
+    <string name="profile_pregnancy">Schwangerschafts- und Stillzeitmodus</string>
+    <string name="profile_save">Speichern</string>
+    <string name="profile_saved">Profil gespeichert (Demo)</string>
+</resources>

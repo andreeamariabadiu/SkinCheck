@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="gray">#9E9E9E</color>
+    <color name="jo_accent">#C5A059</color>
+    <color name="jo_background">#FBF9F5</color>
+    <color name="jo_border">#E2DDD2</color>
+    <color name="jo_button_text">#FFFFFF</color>
+    <color name="jo_primary">#141414</color>
+    <color name="jo_secondary">#6E6E6E</color>
+    <color name="jo_surface">#FFFFFF</color>
+    <color name="jo_surface_alt">#F5F2EB</color>
+    <color name="placeholder_bg">#EFECE6</color>
+    <color name="scan_background">#121212</color>
+    <color name="skin_gold">#C5A059</color>
+    <color name="skin_green">#2E5A44</color>
+    <color name="skin_green_bg">#E8F0EC</color>
+    <color name="skin_red">#8C3B32</color>
+    <color name="skin_red_bg">#F9EFEF</color>
+    <color name="skin_yellow">#9C7C38</color>
+    <color name="skin_yellow_bg">#F7F3EA</color>
+    <color name="white">#FFFFFF</color>
+    <string name="allergy_alcohol">Alkohol</string>
+    <string name="allergy_fragrance">Duftstoffe</string>
+    <string name="allergy_lanolin">Lanolin</string>
+    <string name="allergy_nuts">Nussöle</string>
+    <string name="allergy_preservatives">Konservierungsstoffe</string>
+    <string name="app_name">SkinCheck</string>
+    <string name="detail_close">Schließen</string>
+    <string name="detail_explanation">Erklärung</string>
+    <string name="detail_function">Funktion</string>
+    <string name="detail_source">Quelle</string>
+    <string name="disclaimer">SkinCheck ersetzt keine medizinische Beratung.</string>
+    <string name="filter_all">Alle</string>
+    <string name="filter_fav">Favoriten</string>
+    <string name="filter_green">Grün</string>
+    <string name="filter_red">Rot</string>
+    <string name="filter_yellow">Gelb</string>
+    <string name="history_empty">Keine Produkte gefunden.</string>
+    <string name="history_title">Verlauf &amp; Favoriten</string>
+    <string name="home_favorites">Favoriten</string>
+    <string name="home_history">Verlauf</string>
+    <string name="home_profile">Profil</string>
+    <string name="home_recent">Zuletzt gescannt</string>
+    <string name="home_scan">Scannen</string>
+    <string name="home_subtitle">Scanne den Barcode deines Hautpflegeprodukts und sieh, wie verträglich die Inhaltsstoffe sind.</string>
+    <string name="home_title">Willkommen bei SkinCheck</string>
+    <string name="nav_history">Verlauf</string>
+    <string name="nav_home">Start</string>
+    <string name="nav_profile">Profil</string>
+    <string name="product_image">Produktbild</string>
+    <string name="profile_allergies">Allergien und Unverträglichkeiten</string>
+    <string name="profile_pregnancy">Schwangerschafts- und Stillzeitmodus</string>
+    <string name="profile_save">Speichern</string>
+    <string name="profile_saved">Profil gespeichert (Demo)</string>
+    <string name="profile_skin_type">Hauttyp</string>
+    <string name="profile_title">Mein Hautprofil</string>
+    <string name="profile_wishes">Persönliche Wünsche</string>
+    <string name="rating_green">Grün – unproblematisch</string>
+    <string name="rating_red">Rot – möglicherweise problematisch</string>
+    <string name="rating_yellow">Gelb – Vorsicht</string>
+    <string name="result_back">Zurück</string>
+    <string name="result_barcode">Barcode: %1$s</string>
+    <string name="result_favorite">Zu Favoriten hinzufügen</string>
+    <string name="result_ingredients">Inhaltsstoffe</string>
+    <string name="scan_close">Schließen</string>
+    <string name="scan_error">Bitte einen gültigen Barcode eingeben (8–14 Ziffern)</string>
+    <string name="scan_flash">Taschenlampe</string>
+    <string name="scan_hint">Barcode in den Rahmen legen</string>
+    <string name="scan_manual_label">Barcode manuell eingeben</string>
+    <string name="scan_not_found">Produkt nicht gefunden. Die manuelle Eingabe der Inhaltsstoffe folgt.</string>
+    <string name="scan_search">Suchen</string>
+    <string name="scan_simulate">Scan simulieren (Demo)</string>
+    <string name="skin_combination">Mischhaut</string>
+    <string name="skin_dry">Trocken</string>
+    <string name="skin_normal">Normal</string>
+    <string name="skin_oily">Fettig</string>
+    <string name="skin_sensitive">Empfindlich</string>
+    <string name="wish_no_alcohol">Ohne Alkohol</string>
+    <string name="wish_no_perfume">Ohne Parfüm</string>
+    <style name="Theme.SkinCheck" parent="Theme.Material3.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/jo_primary</item>
+        <item name="colorSecondary">@color/jo_accent</item>
+        <item name="colorSurface">@color/jo_surface</item>
+
+        
+        <item name="android:windowBackground">@color/jo_background</item>
+
+        
+        <item name="android:statusBarColor">@color/jo_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Jo Malone Luxury Palette -->
+    <color name="jo_background">#FBF9F5</color>      <!-- Crem Pergament / Ivory -->
+    <color name="jo_surface">#FFFFFF</color>         <!-- Alb Pur / Carduri -->
+    <color name="jo_surface_alt">#F5F2EB</color>     <!-- Crem Secundar pentru hover/fundaluri alternative -->
+    <color name="jo_primary">#141414</color>         <!-- Negru Obsidian (Text principal) -->
+    <color name="jo_secondary">#6E6E6E</color>       <!-- Gri Cald (Text secundar) -->
+    <color name="jo_accent">#C5A059</color>          <!-- Auriu Șampanie / Bronz subtil -->
+    <color name="jo_border">#E2DDD2</color>          <!-- Bej fin pentru chenare subțiri -->
+    <color name="jo_button_text">#FFFFFF</color>     <!-- Text alb pe butoane -->
+
+    <!-- Status / Rating Luxury Pastels -->
+    <color name="skin_green">#2E5A44</color>         <!-- Verde Eucalipt (Sigur) -->
+    <color name="skin_green_bg">#E8F0EC</color>      <!-- Fundal verde pastel -->
+    <color name="skin_yellow">#9C7C38</color>        <!-- Auriu/Măsliniu (Moderat) -->
+    <color name="skin_yellow_bg">#F7F3EA</color>     <!-- Fundal galben pastel -->
+    <color name="skin_red">#8C3B32</color>           <!-- Roșu Terracotta (Evită) -->
+    <color name="skin_red_bg">#F9EFEF</color>        <!-- Fundal roșu pastel -->
+
+    <!-- Culorile specifice cerute de layout-uri -->
+    <color name="placeholder_bg">#EFECE6</color>     <!-- Pentru bg_placeholder.xml -->
+    <color name="scan_background">#121212</color>    <!-- Pentru fragment_scan.xml -->
+    <color name="skin_gold">#C5A059</color>          <!-- Pentru item_product.xml -->
+
+    <!-- Suport UI -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#9E9E9E</color>
+</resources>

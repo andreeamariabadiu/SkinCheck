@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/jo_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="32dp">
+
+        <!-- Bară de Sus (Buton Înapoi & Buton Favorite) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="←"
+                android:textSize="18sp"
+                android:textColor="@color/jo_primary"
+                android:background="@drawable/bg_luxury_card"
+                app:backgroundTint="@null"
+                android:elevation="0dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="R E Z U L T A T · A N A L I Z Ă"
+                android:textSize="11sp"
+                android:letterSpacing="0.3"
+                android:textColor="@color/jo_accent"
+                android:gravity="center" />
+
+            <ImageButton
+                android:id="@+id/btnFav"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_luxury_card"
+                android:src="@android:drawable/btn_star_big_on"
+                android:contentDescription="Favorite"
+                app:tint="@color/gray"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <!-- Brand și Nume Produs -->
+        <TextView
+            android:id="@+id/tvBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brand"
+            android:textSize="12sp"
+            android:letterSpacing="0.15"
+            android:textColor="@color/jo_accent"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nume Produs"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/jo_primary"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvBarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Barcode: 00000000"
+            android:textSize="12sp"
+            android:textColor="@color/jo_secondary"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Card de Evaluare / Rating -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/jo_surface"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/jo_border"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COMPATIBILITATE"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.2"
+                    android:textColor="@color/jo_secondary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvRatingBig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Evaluare Generală"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/jo_primary" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Titlu Secțiune Ingrediente -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analiza Ingredientelor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/jo_primary"
+            android:layout_marginBottom="12dp" />
+
+        <!-- RecyclerView pentru Ingrediente -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+</ScrollView>

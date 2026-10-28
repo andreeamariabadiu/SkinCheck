@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scan_background"
+    android:padding="24dp">
+
+    <!-- Buton Închidere -->
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_luxury_card"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:contentDescription="Închide"
+        app:tint="@color/jo_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Titlu ecran -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S C A N A R E"
+        android:textSize="12sp"
+        android:letterSpacing="0.3"
+        android:textColor="@color/jo_accent"
+        app:layout_constraintTop_toTopOf="@id/btnClose"
+        app:layout_constraintBottom_toBottomOf="@id/btnClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Buton Blitz / Flash -->
+    <ImageButton
+        android:id="@+id/btnFlash"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_luxury_card"
+        android:src="@android:drawable/ic_menu_camera"
+        android:contentDescription="Flash"
+        app:tint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Chenar / Viewfinder -->
+    <View
+        android:id="@+id/viewFinderBorder"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_luxury_card"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/btnClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poziționați codul în cadru"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:alpha="0.7"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/viewFinderBorder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Zona de Input & Butoane -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/viewFinderBorder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Introduceți codul de bare"
+            app:boxBackgroundColor="@color/jo_surface"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/jo_accent"
+            app:hintTextColor="@color/jo_accent"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionSearch"
+                android:textColor="@color/jo_primary"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Caută Produs"
+            android:textSize="13sp"
+            android:letterSpacing="0.1"
+            android:textStyle="bold"
+            android:textColor="@color/jo_button_text"
+            android:background="@drawable/bg_luxury_button"
+            app:backgroundTint="@null"
+            android:elevation="0dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnSimulate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Simulează Scanare Aleatorie"
+            android:textSize="13sp"
+            android:letterSpacing="0.1"
+            android:textColor="@color/jo_primary"
+            android:background="@drawable/bg_luxury_card"
+            app:backgroundTint="@null"
+            android:elevation="0dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.skincheck.app.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_scan"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_home_to_result"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.skincheck.app.ScanFragment"
+        android:label="Scannen"
+        tools:layout="@layout/fragment_scan">
+        <action
+            android:id="@+id/action_scan_to_result"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/scanFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.skincheck.app.ResultFragment"
+        android:label="Produktergebnis"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="productId"
+            android:defaultValue="1"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.skincheck.app.HistoryFragment"
+        android:label="@string/nav_history"
+        tools:layout="@layout/fragment_history">
+        <argument
+            android:name="filter"
+            android:defaultValue="all"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_history_to_result"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.skincheck.app.ProfileFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>

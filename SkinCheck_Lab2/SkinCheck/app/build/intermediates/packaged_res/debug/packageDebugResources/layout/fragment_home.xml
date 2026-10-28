@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/jo_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="32dp">
+
+        <!-- Header / Brand Niche & Profil -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S K I N · C H E C K"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.4"
+                    android:textColor="@color/jo_accent"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pielea Ta, În Detaliu"
+                    android:textSize="24sp"
+                    android:textStyle="normal"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/jo_primary" />
+            </LinearLayout>
+
+            <!-- Buton Profil (Adăugat pentru a rezolva binding-ul) -->
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="⚙"
+                android:textSize="16sp"
+                android:textColor="@color/jo_primary"
+                android:background="@drawable/bg_luxury_card"
+                app:backgroundTint="@null"
+                android:elevation="0dp" />
+        </LinearLayout>
+
+        <!-- Card Principal / Buton Scan -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_luxury_card"
+            android:padding="24dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DIAGNOSTIC ACTIV"
+                android:textSize="10sp"
+                android:letterSpacing="0.2"
+                android:textColor="@color/jo_secondary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Analiză Inteligentă a Tenului"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/jo_primary"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btnScan"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Începe Analiza"
+                android:textSize="13sp"
+                android:letterSpacing="0.15"
+                android:textStyle="bold"
+                android:textColor="@color/jo_button_text"
+                android:background="@drawable/bg_luxury_button"
+                app:backgroundTint="@null"
+                android:elevation="0dp" />
+
+        </LinearLayout>
+
+        <!-- Butoane Secundare (Istoric & Favorite) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Istoric"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:textColor="@color/jo_primary"
+                android:background="@drawable/bg_luxury_card"
+                app:backgroundTint="@null"
+                android:layout_marginEnd="6dp"
+                android:elevation="0dp" />
+
+            <Button
+                android:id="@+id/btnFavorites"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Favorite"
+                android:textSize="12sp"
+                android:letterSpacing="0.1"
+                android:textColor="@color/jo_primary"
+                android:background="@drawable/bg_luxury_card"
+                app:backgroundTint="@null"
+                android:layout_marginStart="6dp"
+                android:elevation="0dp" />
+
+        </LinearLayout>
+
+        <!-- Secțiune Produse Recente (RecyclerView) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_luxury_card"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ultimele Scanări"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/jo_primary"
+                android:layout_marginBottom="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
